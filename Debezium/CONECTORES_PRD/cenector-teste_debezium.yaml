@@ -1,0 +1,27 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaConnector
+metadata:
+  name: conector-debezium-teste
+  namespace: kafka
+  labels:
+    strimzi.io/cluster: my-connect-s2i-cluster
+spec:
+  class: io.debezium.connector.sqlserver.SqlServerConnector
+  tasksMax: 1
+  config:
+    connector.class: "io.debezium.connector.sqlserver.SqlServerConnector"
+    database.hostname: "hostName"
+    database.port: "1433"
+    database.user: "user"
+    database.password: "password"
+    database.dbname: "database"
+    database.server.name: "alias"
+    table.whitelist: "dbo.table_name"
+    snapshot.mode: "schema_only"
+    database.history.kafka.bootstrap.servers: "my-cluster-kafka-bootstrap:9092"
+    database.history.kafka.topic: "TOPIC_ESTRUT_CDC_TABLE_ALIAS_PRD"
+    event.processing.failure.handling.mode: "warn"
+    topic.creation.default.partitions: "10"
+    topic.creation.default.replication.factor: "3"
+    retriable.restart.connector.wait.ms: "15000"
+    database.applicationIntent: "ReadOnly"

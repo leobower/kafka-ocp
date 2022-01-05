@@ -1,0 +1,31 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: kafdrop
+  namespace: kafka
+  selfLink: /api/v1/namespaces/kafdrop
+spec:
+  replicas: 1
+  selector:
+    io.kompose.service: kafdrop
+  strategy:
+    resources: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: kafdrop
+    spec:
+      containers:
+        - env:
+            - name: JVM_OPTS
+              value: -Xms32M -Xmx64M
+            - name: KAFKA_BROKERCONNECT
+              value: my-cluster-kafka-bootstrap:9092
+          image: obsidiandynamics/kafdrop
+          name: kafdrop
+          ports:
+            - containerPort: 9000
+          resources: {}
+      restartPolicy: Always
+  test: false
