@@ -1,6 +1,8 @@
 # kafka-ocp
 PROCEDIMENTOS PARA INSTALAÇÃO DO KAFKA
-Para efeito de testes, recomendo a utilização da versão developer do OpenShift Cloud oferecido pela RedHat - https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it 
+Para efeito de testes, recomendo a utilização da versão developer do OpenShift Cloud oferecido pela RedHat:
+
+https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it 
 
 <H1>Passo a Passo</H1>
 Acessar o menu Operators => Operators Hub => Filtrar por Red Hat Integration - AMQ Streams: 
