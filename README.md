@@ -6,6 +6,7 @@ https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it
 
 <H1>Passo a Passo</H1>
 Acessar o menu Operators => Operators Hub => Filtrar por Red Hat Integration - AMQ Streams: 
+
 ![alt text](https://github.com/leobower/kafka-ocp/blob/main/Images/img1.JPG)
 
 Ao clicar no Red Hat Integration - AMQ Streams vai abrir uma tela com um botão "Install", clique nesse botão e vai aparecer a tela abaixo, 
