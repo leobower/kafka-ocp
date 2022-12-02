@@ -5,7 +5,7 @@ metadata:
   namespace: kafka
 spec:
   kafka:
-    version: 2.8.0
+    version: 3.1.0
     replicas: 3
     resources:
       limits:
@@ -36,7 +36,7 @@ spec:
     storage:
       type: persistent-claim
       size: 15Gi
-      class: ibmc-block-gold
+      class: ocs-storagecluster-cephfs
   zookeeper:
     replicas: 3
     resources:
@@ -49,7 +49,7 @@ spec:
     storage:
       type: persistent-claim
       size: 3Gi
-      class: ibmc-block-gold
+      class: ocs-storagecluster-cephfs
   entityOperator:
     topicOperator: {}
     userOperator: {}
