@@ -41,11 +41,11 @@ Acessar Operators => Installed Operators. Localizar o Red Hat Integration - AMQ 
 
 ![alt text](https://github.com/leobower/kafka-ocp/blob/main/Images/img8.JPG)
 
-No menu superior, localizar Kafka Connect Source to Image e clicar em CreateKafkaConnectrS2I 
+No menu superior, localizar Kafka Connect e clicar em CreateKafkaConnect 
 
-![alt text](https://github.com/leobower/kafka-ocp/blob/main/Images/img9.JPG)
+![alt text](https://github.com/leobower/kafka-ocp/blob/main/Images/KafkaConnect.PNG)
 
-Na tela de criação do KafkaConnectS2I, clique na opção "YAML view"  e insira o conteúdo do arquivo abaixo (kafkaconnects2i.yaml) e clique em "Create":  
+Na tela de criação do KafkaConnect, clique na opção "YAML view"  e insira o conteúdo do arquivo abaixo (kafkaconnects2i.yaml) e clique em "Create":  
 
 https://github.com/leobower/kafka-ocp/blob/main/kafkaconnects2i.yaml
 
